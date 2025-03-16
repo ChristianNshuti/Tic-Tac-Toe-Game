@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./levels.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Choose a level</h1>
+    <h3 id="still_locked_before">LOCKED</h3>
+    <div>
+        <a href="./Welcome.html"><img src="./backIcon.png" alt="icon"></a>
+        <a href="./dotProduct.html"><button>Easy</button></a>
+        <a  onclick="mode2()"><button>Medium<img src="./locked.png" id="locked1"></button></a>
+        <a onclick="mode3()"><button>Hard<img src="./locked.png" id="locked2"></button></a>
+    </div>
+    <button onclick="reset()" class="resetButton">Reset Score</button>
+    <script>
+        var store1 = JSON.parse(localStorage.getItem('storedScore1'));
+        var store2 = JSON.parse(localStorage.getItem('storedScore2'));
+        var img1 = document.getElementById('locked1');
+        var img2 = document.getElementById('locked2');
+        var locked = document.getElementById('still_locked_before');
+        var reseted = null;
+        console.log(store1);
+        console.log(store2);
+        if(store1 === true){
+                img1.src = './unlocked.png';
+                if(store2 === true){
+                img2.src = './unlocked.png';
+            }
+            }
+        
+        function mode2() {
+            if(store1=== null){
+                locked.id= 'still_locked';
+                setTimeout(() => {locked.id='still_locked_before'},1500);
+            }
+            else if(store1 === true){
+                window.location.href = './dotProductMedium.html';
+            }
+        }
+        function mode3() {
+            if(store2 === null){
+                locked.id= 'still_locked';
+                setTimeout(() => {locked.id= 'still_locked_before'},1500);
+            }
+            else if(store2 === true){
+                window.location.href = './dotProductHard.html';
+
+            }
+        }
+        function reset() {
+            localStorage.setItem('storedScore1',reseted);
+            localStorage.setItem('storedScore2',reseted);
+            window.location.reload();
+        }
+    </script>
+</body>
+</html>

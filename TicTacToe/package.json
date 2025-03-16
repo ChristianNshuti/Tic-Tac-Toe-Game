@@ -1,0 +1,20 @@
+{
+  "name": "tic-tac-toe",
+  "version": "1.0.0",
+  "description": "my X O Game",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Tic-tac-toe",
+    "XO"
+  ],
+  "author": "Nshuti Mulindwa Christian",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^34.0.2",
+    "electron-packager": "^17.1.2"
+  }
+}
