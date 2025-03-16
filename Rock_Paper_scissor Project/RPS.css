@@ -1,0 +1,53 @@
+body {
+    background-color:gray;
+    color:white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+    border-radius:60px;
+    width:100px;
+}
+
+img:active {
+    background-color:blue;
+    border:4px solid red;
+}
+
+figcaption {
+    display:inline-block;
+}
+
+.firstParagraph {
+    color:blue;
+    text-transform:uppercase;
+    font-weight:bold;
+    margin-left:40%;
+    text-decoration:underline;
+}
+.js-results, .js-moves, .js-score {
+    margin-left:45%;
+    margin-top:3%;
+    color:green;
+}
+button {
+    margin-left:47%;
+    margin-top:3%;
+    width:100px;
+    height:30px;
+    border-radius:5px;
+    border:1px;
+    font-weight:bold;
+}
+button:hover {
+    color:white;
+    background-color:black;
+}
+
+div {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    margin-bottom:6%;
+    margin-top:3%;
+}

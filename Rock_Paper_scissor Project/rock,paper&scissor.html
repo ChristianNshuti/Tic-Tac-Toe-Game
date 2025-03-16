@@ -1,0 +1,36 @@
+ <!DOCTYPE html>
+ <html lang="en">
+<head>
+    <script src="./RPS.js"></script>
+    <link rel="stylesheet" href="./RPS.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+ </head>
+ <body>
+    <p class="firstParagraph">Rock Paper Scissors</p><br>
+    <div>
+    <img src="./images/rock.webp"  onclick="   
+        conditions();
+        rock();
+        results();
+    ">
+    <img src="./images/paper.webp" onclick="
+        conditions();
+        paper();
+        results();
+    ">
+    <img src="./images/scissors.webp" onclick="
+        conditions();
+        scissor();       
+        results();
+    ">
+    </div>
+    <p class="js-results"></p>
+    <p class="js-moves"></p>
+    <p class="js-score"></p>
+    <button onclick="
+        reset();
+    ">Reset Score</button><br><br>
+ </body>
+ </html>
